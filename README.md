@@ -3,7 +3,7 @@
 
 Also, packeaged it into a module that can be installed using
 <br>
-<b>pip install my-package-19CS10039==0.0.1</>
+<b>pip install my-package-19CS10039==0.0.1</b>
 
 
 # Software Lab 
