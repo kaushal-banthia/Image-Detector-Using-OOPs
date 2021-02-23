@@ -3,20 +3,7 @@
 
 Also, packeaged it into a module that can be installed using
 <br>
-pip install my-package-19CS10039==0.0.1
-
-<input type="text" value="pip install my-package-19CS10039==0.0.1" id="myInput">
-<button onclick="myFunction()">Copy text</button>
-
-<script>
-function myFunction() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand("copy");
-  alert("Copied the text: " + copyText.value);
-}
-</script>
+<b>pip install my-package-19CS10039==0.0.1</>
 
 
 # Software Lab 
