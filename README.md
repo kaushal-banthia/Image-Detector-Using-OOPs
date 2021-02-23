@@ -85,39 +85,3 @@ e) `blur.py`: This file takes an image (as numpy array) as input and applies a g
 5. `./my_package/analysis/visualize.py`: This file defines a function that draws the image with the predicted bounding boxes (with the corresponding labels) on the image and saves them in the specified output folder.
 
 6. `setup.py`: Use this file for constructing the package `my_package`.
-
-## Coding Task [30 marks]
-
-Note: For handling images, e.g. reading images, etc. we would recommend using PIL instead of OpenCV as OpenCV uses `BGR` format instead of `RGB`.
-
-1. Write the various transformations in `./my_package/data/transforms`. There are five files, as already mentioned. Although these functions are easily implementable using numpy only, you may use any image processing libraries like PIL, skimage or opencv. [2x5=10 marks]
-
-2. Complete the `Dataset` class in `./my_package/data/dataset.py`. This class will accept the path to the annotation file and the list of transformation classes. Ideally you should be directly using transformation classes but you may also use strings to identify the transformations. [5 marks]
-
-3. Write a function `plot_boxes()` in `./my_package/analysis/visualize.py` that will draw the image with the predicted bounding boxes (with the corresponding labels) on the images and save them in the output folder specified in the argument. Please note that you need to plot only the 5 most confident bounding boxes predicted by the object detector. If the detector predicts less than 5 boxes, then plot all of them. [5 marks]
-
-4. Create a python package ``` my_package```. For this you need to write ``` setup.py```. It must be noted that files called ```___init__.py``` need to be added in the hierarchy. We leave it to you to search where they should be added. Note that the user will generally not know the exact files where the classes are written. That means, he does not know that their exist a file ```crop.py``` where the class ```CropImage()``` is defined. Rather he simply knows that this class is defined in ```transforms```. So, a good coding practice is to allow an import statement ```from my_package.data.transforms import CropImage```. [5 marks]
-
-5. Write ```main.py``` where you will test the different transformations you have written on the object detector. The outputs for each of the experiments should be organized properly in the outputs folder. [5 marks]
-
-## Analysis Task [10 marks]
-
-1. Obtain and save the predicted bounding boxes for all the images provided in the `data/imgs` folder. [3 marks]
-
-2. Consider the image with name same as the last digit of your roll number, i.e. if your roll number is 19CS####7 then consider the image `7.jpg` then plot the following using `subplots` in matplotlib and save them: [1x7=7 marks]
-
-	a) The original image along with the predicted bounding boxes.
-
-	b) Horizontally flipped original image along with the predicted bounding boxes.
-
-	c) Blurred image (with some degree of blurring) along with the predicted bounding boxes.
-
-	d) Twice Rescaled image (2X scaled) along with the predicted bounding boxes.
-
-	e) Half Rescaled image (0.5X scaled) along with the predicted bounding boxes.
-
-	f) 90 degree right rotated image along with the predicted bounding boxes.
-
-	g) 45 degree left rotated image along with the predicted bounding boxes.
-
-**Please read the class definitions very carefully. In this assignment you do not need to code a lot, but you need to understand how to integrate several custom modules together in a clean way. More details on the arguments and the return types are provided in the corresponding files.**
